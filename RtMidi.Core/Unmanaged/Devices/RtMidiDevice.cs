@@ -1,14 +1,16 @@
-﻿using System;
-using RtMidi.Core.Unmanaged.API;
-using Serilog;
-using System.Runtime.InteropServices;
-namespace RtMidi.Core.Unmanaged.Devices
+﻿namespace RtMidi.Core.Unmanaged.Devices
 {
+    using System;
+    using System.Runtime.InteropServices;
+
+    using Serilog;
+
+    using Unmanaged.API;
 
     /// <summary>
     /// Abstract RtMidi device base class
     /// </summary>
-    internal abstract class RtMidiDevice : IRtMidiDevice
+    public abstract class RtMidiDevice : IRtMidiDevice
     {
         private static readonly ILogger Log = Serilog.Log.ForContext<RtMidiDevice>();
 

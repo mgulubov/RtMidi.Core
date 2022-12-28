@@ -1,11 +1,14 @@
-﻿using System;
-using RtMidi.Core.Unmanaged.API;
-using Serilog;
-namespace RtMidi.Core.Unmanaged.Devices
+﻿namespace RtMidi.Core.Unmanaged.Devices
 {
-    internal class RtMidiOutputDevice : RtMidiDevice, IRtMidiOutputDevice
+    using System;
+    
+    using Serilog;
+
+    using Unmanaged.API;
+
+    public class RtMidiOutputDevice : RtMidiDevice, IRtMidiOutputDevice
     {
-        internal RtMidiOutputDevice(uint portNumber) : base(portNumber)
+        public RtMidiOutputDevice(uint portNumber) : base(portNumber)
         {
         }
 

@@ -1,10 +1,10 @@
-﻿using System;
-
-namespace RtMidi.Core.Unmanaged.Devices.Infos
+﻿namespace RtMidi.Core.Unmanaged.Devices.Infos
 {
-    internal class RtMidiDeviceInfo
+    using System;
+
+    public class RtMidiDeviceInfo
     {
-        internal RtMidiDeviceInfo(uint port, string name)
+        public RtMidiDeviceInfo(uint port, string name)
         {
             Port = port;
 
@@ -15,6 +15,7 @@ namespace RtMidi.Core.Unmanaged.Devices.Infos
         }
 
         public uint Port { get; }
+
         public string Name { get; }
     }
 }

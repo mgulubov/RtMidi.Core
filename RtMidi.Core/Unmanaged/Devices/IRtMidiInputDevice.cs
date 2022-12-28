@@ -1,10 +1,11 @@
-﻿using System;
-namespace RtMidi.Core.Unmanaged.Devices
+﻿namespace RtMidi.Core.Unmanaged.Devices
 {
+    using System;
+
     /// <summary>
     /// RtMidi Input device
     /// </summary>
-    internal interface IRtMidiInputDevice : IRtMidiDevice
+    public interface IRtMidiInputDevice : IRtMidiDevice
     {
         /// <summary>
         /// MIDI message was received

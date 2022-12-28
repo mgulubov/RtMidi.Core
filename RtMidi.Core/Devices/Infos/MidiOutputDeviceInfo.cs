@@ -1,7 +1,8 @@
-﻿using RtMidi.Core.Unmanaged.Devices.Infos;
-namespace RtMidi.Core.Devices.Infos
+﻿namespace RtMidi.Core.Devices.Infos
 {
-    internal class MidiOutputDeviceInfo : MidiDeviceInfo<RtMidiOutputDeviceInfo>, IMidiOutputDeviceInfo
+    using Unmanaged.Devices.Infos;
+
+    public class MidiOutputDeviceInfo : MidiDeviceInfo<RtMidiOutputDeviceInfo>, IMidiOutputDeviceInfo
     {
         public MidiOutputDeviceInfo(RtMidiOutputDeviceInfo rtMidiDeviceInfo) : base(rtMidiDeviceInfo)
         {
