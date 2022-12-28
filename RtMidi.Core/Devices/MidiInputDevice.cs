@@ -1,12 +1,14 @@
-﻿using System;
-using RtMidi.Core.Messages;
-using RtMidi.Core.Unmanaged.Devices;
-using Serilog;
-using RtMidi.Core.Devices.Nrpn;
-
-namespace RtMidi.Core.Devices
+﻿namespace RtMidi.Core.Devices
 {
-    internal class MidiInputDevice : MidiDevice, IMidiInputDevice
+    using System;
+    
+    using Serilog;
+
+    using Messages;
+    using Unmanaged.Devices;
+    using Devices.Nrpn;
+
+    public class MidiInputDevice : MidiDevice, IMidiInputDevice
     {
         private static readonly ILogger Log = Serilog.Log.ForContext<MidiInputDevice>();
         private readonly IRtMidiInputDevice _inputDevice;

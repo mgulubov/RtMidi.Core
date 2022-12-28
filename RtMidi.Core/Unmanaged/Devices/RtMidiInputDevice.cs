@@ -1,17 +1,20 @@
-﻿using System;
-using RtMidi.Core.Unmanaged.API;
-using Serilog;
-using System.Runtime.InteropServices;
-namespace RtMidi.Core.Unmanaged.Devices
+﻿namespace RtMidi.Core.Unmanaged.Devices
 {
-    internal class RtMidiInputDevice : RtMidiDevice, IRtMidiInputDevice
+    using System;
+    using System.Runtime.InteropServices;
+
+    using Serilog;
+
+    using Unmanaged.API;
+
+    public class RtMidiInputDevice : RtMidiDevice, IRtMidiInputDevice
     {
         /// <summary>
         /// Ensure delegate is not garbage collected (see https://stackoverflow.com/questions/6193711/call-has-been-made-on-garbage-collected-delegate-in-c)
         /// </summary>
         private readonly RtMidiCallback _rtMidiCallbackDelegate;
 
-        internal RtMidiInputDevice(uint portNumber) : base(portNumber)
+        public RtMidiInputDevice(uint portNumber) : base(portNumber)
         {
             _rtMidiCallbackDelegate = HandleRtMidiCallback;
         }

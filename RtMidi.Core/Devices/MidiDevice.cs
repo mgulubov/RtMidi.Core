@@ -1,10 +1,10 @@
-﻿using RtMidi.Core.Unmanaged.Devices;
-using System;
-
-namespace RtMidi.Core.Devices
+﻿namespace RtMidi.Core.Devices
 {
+    using System;
 
-    internal abstract class MidiDevice : IMidiDevice 
+    using Unmanaged.Devices;
+    
+    public abstract class MidiDevice : IMidiDevice 
     {
         private readonly IRtMidiDevice _rtMidiDevice;
         private bool _disposed;

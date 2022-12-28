@@ -1,10 +1,11 @@
-﻿using System.Linq;
-using RtMidi.Core.Messages;
-using RtMidi.Core.Unmanaged.Devices;
-
-namespace RtMidi.Core.Devices
+﻿namespace RtMidi.Core.Devices
 {
-    internal class MidiOutputDevice : MidiDevice, IMidiOutputDevice
+    using System.Linq;
+
+    using Messages;
+    using Unmanaged.Devices;
+
+    public class MidiOutputDevice : MidiDevice, IMidiOutputDevice
     {
         private readonly IRtMidiOutputDevice _outputDevice;
         
